@@ -1,0 +1,112 @@
+MCI JAVA(11-Jun-18)Day1
+-----------------------------
+Overview	Overview CI
+GIT	Intro to GIT
+	Checking in and Checking out the code
+	Branch Management
+	Rebasing
+Maven 	Maven Fundamentals
+	Adding dependencies
+	Building Project using Maven
+Sonar	Installing and Confuguring Sonar
+	Integration with Maven
+	Sonar Properties
+	Sonar Dashboard setup
+Jenkins	Introduction
+	Installing and Confuguring Jenkins
+	Plugins,JUNIT,(Based on time availability,we may see app 
+
+monitoring tool ex:appdynamics)
+----------------------------------
+https://github.com/kolaparthisrini/DEVOPSONSiteJUne11
+----------------------------------
+Software required:
+  Eclipse Luna,Sonarqube 5.6 or 5.5,Apache Maven,Jenkins,Jenkins hpi  
+
+plugins,Notepad++
+
+-------------------------------------------
+
+  DEVOPS(MCI,MCD),DEVOPS can be implemented on Scrum and agile.
+
+CI,CD
+       DEVOPS=Development team +Operations TEam(Depolyment/IT/Hosting)
+    Continous integration/Delivery and continous code quality testing
+
+per a day,only 1 time
+
+Angular----Angu2--june18
+sep-Ang4,dec-Ang5
+     java----1.6,17,18,19
+
+
+   man power/Automation tools,DEVOPS is not framework.Programming 
+
+language.DEVOPS is Software culture.
+
+--------------------------------------------
+ DEVOPS ENgineer
+
+Distributed Databases/Agile method and more no of tools.
+
+ DEVOPS=CI+CD
+  
+  CI=TDD+tools,CD=BDD+tools
+
+CI=====DEVELOPERS,   CDBDD====BA/Functional consultant 
+
+guys/Archjitects/Managers/Delivery.
+
+
+Identifying right tool for devps is most challenging in market....:(
+
+
+1)approaches,architecture,Budget,scope and no of years.
+  
+    Whther it is competable to integrate,Security concern,UI...
+
+    R&D team,DEVOPS Architect/Solution architect/Customers/We can 
+
+decide.  Example:NN group.Customer is providing tools.
+
+ RAML in mulesoftESB's.   github ---2 flavours1 public/private
+
+
+Java testing:junit/Mockito/power mockito/Testng/Qunit
+  Testers:Selenium
+  Javascript:Karma/Jasmine/Mocha/.js
+  BDD:Cucumber/specflow
+  Python:pytest
+
+   DEVOPS is not restricted to java and .net.
+  Devops is for all programming languages.
+
+
+   Config manage:Puppet/chef/Salt/ansible
+
+What is config management?
+
+Artifact Management:  artifact=Dependency
+
+   ojdb14.jar  1)maven 2)manual aproach
+
+  From security prospective Public(exa:Bustop)/private(Ex:Capgemini)?
+
+If u use any URl,u r accessing a jar file available in public repo.
+
+i need to trust only verified jars.Solution)Corporate repository
+
+1) Identify ur dependencies
+2)Verify the dependencies from Security and other prospectives
+3)Make available to the team mates(by placing in corporate repo
+
+(intranet)).
+To create a corporate repo,we need to use nexus sonatype tool.
+
+
+
+
+
+
+
+
