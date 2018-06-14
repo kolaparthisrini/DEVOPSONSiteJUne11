@@ -102,7 +102,150 @@ i need to trust only verified jars.Solution)Corporate repository
 
 (intranet)).
 To create a corporate repo,we need to use nexus sonatype tool.
+---------------------------------------------------------------------------------------------------------
+Day2:
+Maven and nexus sonatype artifact repo.
 
+zipkin monitoring tool for microservices
+Monitoring tool:
+    sentry----python
+	Zipkin---Microservices
+	Pivotal cloud foundry/AWS----new reliac(service which is freely available as a part of pcf)
+	java----elastic search/kibana/splunk/logstack/appdynamics
+
+	
+ORchestration &Scheduling module:used for scheduling your tasks and designing composite webservices.
+Long and latitude.
+  if one webservice is dependentt on another webservice.
+  Ex:Googl maps is interacting with another internal webservice which will fetch lat*long.
+      1 services is fetching lat*long based on source and dest.
+	  1service-=fetc lat*long
+oher=displaying route location on map.
+
+
+MAven:is a build tool
+1)We can manage dependencies(Dependency management)
+2)Scaffolding can be done(Creating project Structure)
+3)Automatic Deployment can be performed.
+---
+4)Plugin management
+5)Repository management
+6)Bundle creations for your OSGI environment made easy.
+Questions)r u able to add plugins in eclipse?  yes
+         2)r u able to add plugins in eclipse without restarting or exiting ur eclipse?  yes  
+		 
+		 Ans)It is not maven.It is because of Bundles.Bundle is similarly like a jar file but with additional capabilities.(Hot /cold installation of plugins).To undertsnad bundle,u shld be v v v v good at JAr concepts.
+		 JAR Disadvantage:No Enough Dynamics Class loading capabilities.
+		 
+		 In coming years;u will not see jars ,u will see bundles.
+		 
+		 To run java programs,we need JVM.TO run Bundle,we need OSGI Engine.
+		 Example for OSGI engines:Apache felix,Eclipse standard/Equinox
+		 
+		 PRogramming toools using OSGI:Jboss Fuse/Apache camel.
+		 
+		 Bundles can also be used for designing IDE tools and AutoDeployment.
+		 
+		 
+		 
+
+7)Transtive dependency management:if one dependency is dependenyt on another dependency.Then it is called as transtive dependency.
+Exa: class A
+{
+}
+class B extends A
+{
+}
+
+B obj=new B();How many classes are there in B(except Object class)?  2
+
+Dependency A
+Dependency B uses internally A......then Which one is transtive dependency?A
+
+A--dep1
+B--dep2
+C--dep3
+D--depends on A & B======>2 transtive dependencies.Sol)
+
+PAckaging(jar/war/ear)
+8)PAcking of ur code(Jar/war/ear)
+9)Maven can download dependencies automatically.Maven will fetch dependencies from following locations
+1)Local repository
+2)Corporate repo
+3)Remote repo
+4)Public/Central repo
+Maven uses one configuration file(POM.XML).
+How maven runs ur app?Ans:Based on maven lifecycle.
+Instead of pom.xml can i have pom.html ans)no
+html is for UI.Note:Configuartions can be in 3 waays 1)xml 2)Annotations 3)JSOn approach
+oject one pom.
+Note:POM to POM inheritance is possible.
+
+10)Profiling(UAT/PRePROD/Prod)
+2 cases:1)IF u r selecting maven project,trhen maven will create project structure for u.
+        2)If you are not selecting maven or gradle;then by default ANT comes into picture.
+		
+		Eclipse IDE by default uses ANT tool.
+		ANT/Maven/GRADLE
+
+maven------->local repo(C:\Users\USername\.m2)---->corporate repo(nexus)---remote/public repo(mvn repository)
+
+POM.xml consists of maven commands.
+Eclipse is bundled with maven.
+
+GroupiD---packagename
+Artifact ID----Projectname
+
+I need to work on A project named as JDBCMysql Project.
+
+Ineed to add below dependencies:mysql connector,log4j,junit
+
+
+Along with ur answers,if project migrations ocur,then will it create a problem?
+
+
+we need to use maven.
+-------------------------------------------------------------------------------------------
+  Day3
+  
+  Maven is having one more config which is called as setting.xml file.
+  app level---pom.xml file
+  aat workspace level ---setting.xml file(can be used for below purposes.)
+    1)U can provide proxy infor in this file
+	2)U can also provide ur repository information
+	3)U can also change local repo file system location from this setting.xml
+	4)security can also be provided from setting xml file for local repo........etc
+-------------------------------------------------------------------------
+	Day4:
+	
+	All features we r going to configure in POM.xml.
+	corporate repo can be supplied in 2 files:1 is pom.xml 2)setting.xml
+	
+	we shld not config transtive dependencies/dependencies in setting.xml.
+	Localrepo====c:\\User\skolapar\\.m2
+	
+	There is no D: drive ur PC's
+	U r connected to diffirent n/w.
+	By default eclipse uses ,JRE.
+	But maven expects JDK\JRE.  By default all browsers uses JRE,but not JDK.
+	
+	Troubleshotting tech for Maven:
+	-------------------------------
+	1)Missing artifact means there is no jar with the specified version.Sometimes there is change of jar archiving by vendor.
+	2)if u any maven issue(but without error in pom.xml);u need to do force updayte.
+	right click on project--->maven--->Update project--->Force Update
+	3)Still if issue is not fixed,then 1)Simply remove .m2 folder.
+	                                   2)If u r facing any challenges even after performing above tasks
+									   then simply switch to new workspace.
+	
+	
+	Precautaions:1)Always Crosscheck your setting.xml and Pom.xml for validness.
+	2)Paths shld be valid irrespective of OS.
+	3)always cross check type of extensions ur using fr ur files.("setting.xml")
+	4)Dont use flatfiles(no txt file) for configuration.
+	5)Define relationships between parent and child pom in proper way.
+	6)Cross check ur Corporate repo path for validness.if needed u need to provide proxy info fr ur n/w.
+	7)U need to have valid internet connectivity.
 
 
 
