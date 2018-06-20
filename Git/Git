@@ -1,1 +1,4 @@
 
+git ls-tree -r --name-only
+git show head
+git log --pretty=oneline --decorate
